@@ -1,9 +1,5 @@
-import { AffordabilityCalculator } from "@/components/affordability-calculator";
+import { PropertyCalculator } from "@/components/property-calculator";
 
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-background">
-      <AffordabilityCalculator />
-    </main>
-  );
+export default function Page() {
+  return <PropertyCalculator />;
 }
