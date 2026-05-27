@@ -10,6 +10,7 @@ import {
   PiggyBank,
   CreditCard,
   Building2,
+  Linkedin,
 } from "lucide-react";
 import { cn, formatCurrency, formatPercent } from "@/lib/utils";
 
@@ -235,6 +236,30 @@ export function AffordabilityCalculator() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+      {/* Top Navigation Bar with Logo and LinkedIn */}
+      <nav className="flex items-center justify-between mb-8">
+        <div className="flex items-center gap-3">
+          <img
+            src="/logo.jpg"
+            alt="Gladwin Alexander Logo"
+            className="h-[70px] w-[70px] sm:h-[80px] sm:w-[80px] rounded-full object-cover"
+          />
+          <span className="text-lg font-semibold text-foreground hidden sm:inline">
+            Property Affordability Planner
+          </span>
+        </div>
+        <a
+          href="https://www.linkedin.com/in/gladwin-a-641633117"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-lg bg-[#0077B5] px-4 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-[#005582]"
+        >
+          <Linkedin className="h-4 w-4" />
+          <span className="hidden sm:inline">Connect on LinkedIn</span>
+          <span className="sm:hidden">Connect</span>
+        </a>
+      </nav>
+
       <header className="mb-8 text-center">
         <div className="inline-flex items-center justify-center rounded-full bg-primary/10 p-3 mb-4">
           <Home className="h-8 w-8 text-primary" />
@@ -498,6 +523,21 @@ export function AffordabilityCalculator() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="mt-12 pt-6 border-t border-border text-center">
+        <p className="text-sm text-muted-foreground">
+          Built with <span className="text-red-500">&#10084;</span> by Gladwin Alexander |{" "}
+          <a
+            href="https://www.linkedin.com/in/gladwin-a-641633117"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline transition-colors"
+          >
+            Let&apos;s Talk Real Estate
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
