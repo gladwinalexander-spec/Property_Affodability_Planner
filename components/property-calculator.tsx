@@ -19,7 +19,8 @@ import {
   calculateTotalUpfront,
   calculateTotalInterest,
 } from "@/lib/calculations";
-import { Home, IndianRupee, Wallet, PiggyBank, Building2, Calculator, Briefcase } from "lucide-react";
+import { IndianRupee, Wallet, PiggyBank, Building2, Calculator, Briefcase, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 export function PropertyCalculator() {
   const [salary, setSalary] = useState(150000);
@@ -80,15 +81,30 @@ export function PropertyCalculator() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-primary text-primary-foreground">
-              <Home className="w-5 h-5" />
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/logo.png"
+                alt="Let's Talk Real Estate"
+                width={60}
+                height={60}
+                className="rounded-full"
+              />
+              <div>
+                <h1 className="text-lg md:text-xl font-bold text-foreground">Property Affordability Planner</h1>
+                <p className="text-xs md:text-sm text-muted-foreground">For Indian Home Buyers</p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-foreground">Property Affordability Planner</h1>
-              <p className="text-sm text-muted-foreground">For Indian Home Buyers</p>
-            </div>
+            <a
+              href="https://www.linkedin.com/in/gladwin-a-641633117"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg bg-[#0077B5] text-white hover:bg-[#006399] transition-colors"
+            >
+              <Linkedin className="w-4 h-4" />
+              <span className="hidden sm:inline">Connect on LinkedIn</span>
+            </a>
           </div>
         </div>
       </header>
@@ -297,9 +313,20 @@ export function PropertyCalculator() {
         </Card>
 
         {/* Footer */}
-        <footer className="text-center py-6 text-sm text-muted-foreground border-t border-border">
+        <footer className="text-center py-6 text-sm text-muted-foreground border-t border-border space-y-2">
           <p>This calculator provides estimates for planning purposes only.</p>
           <p>Actual loan eligibility depends on your credit score, employment, and bank policies.</p>
+          <p className="pt-2">
+            Built with ❤️ by Gladwin Alexander |{" "}
+            <a
+              href="https://www.linkedin.com/in/gladwin-a-641633117"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline font-medium"
+            >
+              Let&apos;s Talk Real Estate
+            </a>
+          </p>
         </footer>
       </main>
     </div>
